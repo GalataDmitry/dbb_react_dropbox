@@ -117,7 +117,6 @@ export const deleteItems = createAsyncThunk(
 export const uploadNewFile = createAsyncThunk(
     'uploadFile',
     async (uploadFileData: UploadNewFileTypes) => {
-
         const {folderPath, fileName, uploadFile} = uploadFileData
         const config: AxiosRequestConfig = {
             url: 'https://content.dropboxapi.com/2/files/upload',
@@ -145,7 +144,6 @@ export const uploadNewFile = createAsyncThunk(
 export const getPreview = createAsyncThunk(
     'getPreview',
     async (getPreviewData: GetPreviewTypes) => {
-
         const {folderPath, name} = getPreviewData
         const config: AxiosRequestConfig = {
             url: 'https://content.dropboxapi.com/2/files/get_preview',
